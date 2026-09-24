@@ -1,0 +1,160 @@
+
+/* ============================================
+   HIMA TECH IT HUB - Main Theme CSS
+   Edit this file on GitHub to change colors
+   Last: REDISH BLACKISH - Dark Rich Mehroon
+   ============================================ */
+
+:root{
+ /* Base Blacks */
+ --black: #08080A;
+ --black2: #121214;
+ --black3: #0A0A0C;
+
+ /* Cards */
+ --card: #1C1C24;
+ --card2: #23232E;
+ --card3: #2A2A36;
+
+ /* Dark Rich Mehroon - Primary Theme */
+ --maroon: #7D1A36;      /* dark rich mehroon - main */
+ --maroon2: #9B2344;     /* rich mehroon - hover */
+ --maroon3: #5A1026;     /* deepest mehroon - gradient end */
+ --maroon-light: #D4A0AD;/* light mehroon for text */
+ --maroon-glow: rgba(125,26,54,0.28);
+
+ /* Legacy pink (now mapped to mehroon) - keep for backward compat */
+ --pink-old: #FF2D6B;
+ --pink-old2: #B91C4A;
+
+ /* Gold */
+ --gold: #FFD76B;
+ --gold2: #D4AF37;
+
+ /* Text */
+ --white: #F8F8FF;
+ --muted: #A8A8B8;
+ --muted2: #6A6A7A;
+ --muted3: rgba(248,248,255,0.65);
+
+ /* Borders */
+ --border: #2A2A36;
+ --border2: #343444;
+ --border-mehroon: rgba(125,26,54,0.22);
+
+ /* Shadows */
+ --shadow-mehroon: 0 8px 28px rgba(125,26,54,0.35);
+ --shadow-mehroon-hover: 0 12px 36px rgba(125,26,54,0.45);
+}
+
+/* ============================================
+   GLOBAL BACKGROUNDS
+   ============================================ */
+html, body {
+  background: var(--black) !important;
+  color: var(--white);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+#root {
+  background:
+    radial-gradient(1100px 700px at 10% -10%, rgba(125,26,54,0.28), transparent 60%),
+    radial-gradient(900px 600px at 90% 5%, rgba(90,16,38,0.22), transparent 55%),
+    radial-gradient(700px 500px at 50% 110%, rgba(74,14,31,0.18), transparent 60%),
+    var(--black) !important;
+  min-height: 100vh;
+}
+
+/* ============================================
+   TAILWIND CLASS OVERRIDES - Maps to your :root
+   ============================================ */
+
+/* Page backgrounds */
+.bg-\[\#0A0A0D\] { background: var(--black) !important; }
+.bg-\[\#0F0F12\], .bg-\[\#0F0F12\]\/90 { background: var(--black2) !important; }
+.bg-\[\#050507\] { background: var(--black3) !important; }
+.bg-black\/60 { background: rgba(8,8,10,0.85) !important; }
+
+/* Cards */
+.bg-white\/\[0\.03\] { background: rgba(42,42,54,0.5) !important; }
+.bg-white\/\[0\.04\] { background: var(--card) !important; }
+.bg-white\/\[0\.06\] { background: var(--card2) !important; }
+.bg-white\/\[0\.08\] { background: var(--card3) !important; }
+
+/* Borders */
+.border-white\/\[0\.04\] { border-color: var(--border) !important; }
+.border-white\/\[0\.06\] { border-color: var(--border) !important; }
+.border-white\/\[0\.08\] { border-color: var(--border-mehroon) !important; }
+.border-white\/\[0\.1\] { border-color: var(--border2) !important; }
+.border-white\/\[0\.12\] { border-color: var(--border2) !important; }
+
+/* Text */
+.text-white { color: var(--white) !important; }
+.text-white\/30 { color: var(--muted2) !important; }
+.text-white\/40 { color: var(--muted2) !important; }
+.text-white\/50 { color: var(--muted) !important; }
+.text-white\/60 { color: var(--muted3) !important; }
+
+/* ============================================
+   BUTTONS - Dark Rich Mehroon
+   ============================================ */
+.bg-white, .bg-white.text-black {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon3) 100%) !important;
+  color: var(--white) !important;
+  border: 1px solid rgba(125,26,54,0.3) !important;
+  box-shadow: var(--shadow-mehroon) !important;
+  transition: all 0.25s ease !important;
+}
+
+.bg-white.text-black:hover, .bg-white:hover {
+  background: linear-gradient(135deg, var(--maroon2) 0%, var(--maroon) 100%) !important;
+  box-shadow: var(--shadow-mehroon-hover) !important;
+  transform: translateY(-1px);
+}
+
+/* Gold gradients -> Mehroon gradients */
+.gold-gradient {
+  background: linear-gradient(90deg, var(--maroon) 0%, var(--maroon2) 60%, var(--maroon3) 100%) !important;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--maroon-light), var(--maroon2), var(--maroon));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* Legacy pink badges */
+.bg-\[\#FF2D6B\] { background: var(--maroon) !important; }
+.text-\[\#FFD76B\] { color: var(--gold) !important; }
+.text-\[\#FF8AA8\] { color: var(--maroon-light) !important; }
+
+/* ============================================
+   GLASS / CARDS / FOOTER
+   ============================================ */
+.glass {
+  background: rgba(22,22,30,0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--border2) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5) !important;
+}
+
+footer.bg-\[\#0A0A0D\] { background: var(--black) !important; }
+
+/* Hover states */
+div[class*="rounded-[22px]"]:hover, div[class*="rounded-[18px]"]:hover {
+  border-color: var(--border-mehroon) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px var(--border-mehroon) !important;
+}
+
+/* ============================================
+   HOW TO EDIT ON GITHUB
+   ============================================
+   1. Is file ko repo me /css/site.css ya /assets/site.css me rakho
+   2. HTML me <link rel="stylesheet" href="./css/site.css"> add karo </head> se pehle
+   3. Colors change karne ke liye sirf :root ke variables edit karo:
+      --maroon: #8B1B3D  -> dark rich mehroon change
+      --black: #101015   -> background change
+      --white: #F8F8FF   -> text change
+   4. Push karo, Vercel auto-deploy ho jayega
+   ============================================ */
