@@ -102,6 +102,109 @@ html, body {
   background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon3) 100%) !important;
   color: var(--white) !important;
   border: 1px solid rgba(125,26,54,0.3) !important;
+/* ============================================
+   HIMA TECH IT HUB - Main Theme CSS
+   Fixed: 100% Dark Rich Mehroon Buttons
+   ============================================ */
+
+:root{
+ /* Base Blacks */
+ --black: #08080A;
+ --black2: #121214;
+ --black3: #0A0A0C;
+
+ /* Cards */
+ --card: #1C1C24;
+ --card2: #23232E;
+ --card3: #2A2A36;
+
+ /* Dark Rich Mehroon - Primary Theme - FIXED DARK */
+ --maroon: #5A1026;      /* main button - deepest mehroon */
+ --maroon2: #7D1A36;     /* hover - rich mehroon */
+ --maroon3: #3D0A1A;     /* deepest - gradient end */
+ --maroon-light: #D4A0AD;
+ --maroon-glow: rgba(90,16,38,0.32);
+
+ /* Legacy pink (now mapped to mehroon) */
+ --pink-old: #7D1A36;
+ --pink-old2: #5A1026;
+
+ /* Gold */
+ --gold: #FFD76B;
+ --gold2: #D4AF37;
+
+ /* Text */
+ --white: #F8F8FF;
+ --muted: #A8A8B8;
+ --muted2: #6A6A7A;
+ --muted3: rgba(248,248,255,0.65);
+
+ /* Borders */
+ --border: #2A2A36;
+ --border2: #343444;
+ --border-mehroon: rgba(90,16,38,0.30);
+
+ /* Shadows */
+ --shadow-mehroon: 0 8px 28px rgba(90,16,38,0.38);
+ --shadow-mehroon-hover: 0 12px 36px rgba(90,16,38,0.55);
+}
+
+/* ============================================
+   GLOBAL BACKGROUNDS
+   ============================================ */
+html, body {
+  background: var(--black) !important;
+  color: var(--white);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+#root {
+  background:
+    radial-gradient(1100px 700px at 10% -10%, rgba(90,16,38,0.22), transparent 60%),
+    radial-gradient(900px 600px at 90% 5%, rgba(61,10,26,0.22), transparent 55%),
+    radial-gradient(700px 500px at 50% 110%, rgba(61,10,26,0.15), transparent 60%),
+    var(--black) !important;
+  min-height: 100vh;
+}
+
+/* ============================================
+   TAILWIND CLASS OVERRIDES
+   ============================================ */
+.bg-\[\#0A0A0D\] { background: var(--black) !important; }
+.bg-\[\#0F0F12\], .bg-\[\#0F0F12\]\/90 { background: var(--black2) !important; }
+.bg-\[\#050507\] { background: var(--black3) !important; }
+.bg-black\/60 { background: rgba(8,8,10,0.85) !important; }
+
+.bg-white\/\[0\.03\] { background: rgba(42,42,54,0.5) !important; }
+.bg-white\/\[0\.04\] { background: var(--card) !important; }
+.bg-white\/\[0\.06\] { background: var(--card2) !important; }
+.bg-white\/\[0\.08\] { background: var(--card3) !important; }
+
+.border-white\/\[0\.04\] { border-color: var(--border) !important; }
+.border-white\/\[0\.06\] { border-color: var(--border) !important; }
+.border-white\/\[0\.08\] { border-color: var(--border-mehroon) !important; }
+.border-white\/\[0\.1\] { border-color: var(--border2) !important; }
+.border-white\/\[0\.12\] { border-color: var(--border2) !important; }
+
+.text-white { color: var(--white) !important; }
+.text-white\/30 { color: var(--muted2) !important; }
+.text-white\/40 { color: var(--muted2) !important; }
+.text-white\/50 { color: var(--muted) !important; }
+.text-white\/60 { color: var(--muted3) !important; }
+
+/* ============================================
+   BUTTONS - Dark Rich Mehroon - FINAL FIX
+   Yehi aapke tez buttons ko pakdega
+   ============================================ */
+
+/* 1. Main CTA buttons jo abhi white ya bright hain */
+.bg-white, 
+.bg-white.text-black,
+button.bg-white,
+a.bg-white {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon3) 100%) !important;
+  color: var(--white) !important;
+  border: 1px solid rgba(125,26,54,0.35) !important;
   box-shadow: var(--shadow-mehroon) !important;
   transition: all 0.25s ease !important;
 }
@@ -110,6 +213,36 @@ html, body {
   background: linear-gradient(135deg, var(--maroon2) 0%, var(--maroon) 100%) !important;
   box-shadow: var(--shadow-mehroon-hover) !important;
   transform: translateY(-1px);
+}
+
+/* 2. BRIGHT RED / PINK BUTTONS - Yehi screenshot wale tez buttons hain */
+.bg-\[\#FF2D6B\],
+.bg-\[\#FF1744\],
+.bg-\[\#FF0A4A\],
+.bg-\[\#FF0033\],
+.bg-\[\#E11D48\],
+.bg-\[\#ff2d6b\],
+.bg-red-500,
+.bg-red-600,
+.bg-pink-500,
+.bg-pink-600,
+.bg-rose-500,
+.bg-rose-600,
+button[class*="bg-red"],
+button[class*="bg-pink"],
+a[class*="bg-red"],
+a[class*="bg-pink"] {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon3) 100%) !important;
+  background-color: var(--maroon) !important;
+  color: var(--white) !important;
+  border: 1px solid rgba(125,26,54,0.35) !important;
+  box-shadow: var(--shadow-mehroon) !important;
+}
+
+/* 3. H Logo */
+.bg-\[\#FF2D6B\].rounded-\[16px\], 
+div[class*="H"].bg-\[\#FF2D6B\] {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon2) 100%) !important;
 }
 
 /* Gold gradients -> Mehroon gradients */
@@ -124,8 +257,6 @@ html, body {
   color: transparent !important;
 }
 
-/* Legacy pink badges */
-.bg-\[\#FF2D6B\] { background: var(--maroon) !important; }
 .text-\[\#FFD76B\] { color: var(--gold) !important; }
 .text-\[\#FF8AA8\] { color: var(--maroon-light) !important; }
 
@@ -141,20 +272,7 @@ html, body {
 
 footer.bg-\[\#0A0A0D\] { background: var(--black) !important; }
 
-/* Hover states */
 div[class*="rounded-[22px]"]:hover, div[class*="rounded-[18px]"]:hover {
   border-color: var(--border-mehroon) !important;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px var(--border-mehroon) !important;
 }
-
-/* ============================================
-   HOW TO EDIT ON GITHUB
-   ============================================
-   1. Is file ko repo me /css/site.css ya /assets/site.css me rakho
-   2. HTML me <link rel="stylesheet" href="./css/site.css"> add karo </head> se pehle
-   3. Colors change karne ke liye sirf :root ke variables edit karo:
-      --maroon: #8B1B3D  -> dark rich mehroon change
-      --black: #101015   -> background change
-      --white: #F8F8FF   -> text change
-   4. Push karo, Vercel auto-deploy ho jayega
-   ============================================ */
